@@ -36,23 +36,6 @@ window.onload = function() {
        
 }
 
-window.onscroll = function() {
-    if (window.innerWidth > 800) {
-        if (window.scrollY > window.innerHeight * 1.5) {
-            canvas.style.display = 'none';
-        } else {
-            canvas.style.display = 'block';
-        }
-    }
-    var winHeight = window.innerHeight;
-    var scrHeight = window.scrollY;
-    var opcVal = 1 - (scrHeight / winHeight);
-    if (opcVal < 0) {
-        opcVal = 0;
-    }
-    canvas.style.opacity = opcVal;
-}
-
 function drawShapes() {
     ctx.clearRect(0, 0, w, h); 
     for (let i = 0; i < shapes.length; i++) {
